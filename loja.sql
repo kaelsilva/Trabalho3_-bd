@@ -59,16 +59,16 @@ CREATE TABLE Pedido(
 );
 CREATE TABLE Loja(
 	cnpj varchar(19) NOT NULL,
-    nome varchar(20) NOT NULL,
+    nome varchar(50) NOT NULL,
 	PRIMARY KEY (cnpj)
 );
 CREATE TABLE Estoque(
   id int NOT NULL AUTO_INCREMENT,
-  locall varchar(45) NOT NULL,
+  local varchar(45) NOT NULL,
   cnpj varchar(19) NOT NULL,
   id_item int NOT NULL,
-  descricao varchar(10) NOT NULL,
-  data_abst DATE  NOT NULL,
+  descricao varchar(50) NOT NULL,
+  data_abastecimento DATE  NOT NULL,
   PRIMARY KEY (id),
 	FOREIGN KEY (cnpj) REFERENCES Loja(cnpj),
     FOREIGN KEY (id_item) REFERENCES Produto(id_item)
@@ -93,7 +93,7 @@ CREATE TABLE ListaDeVendas(
 	c_idgerada int NOT NULL AUTO_INCREMENT,
     id_pedido int NOT NULL,#id_dos pedidos vendidos
     hora TIME NOT NULL,
-    statuss VARCHAR (50) NOT NULL,
+    status VARCHAR (50) NOT NULL,
 	PRIMARY KEY (c_idgerada),
 	FOREIGN KEY (id_pedido) REFERENCES Pedido(id_pedido)
 );
