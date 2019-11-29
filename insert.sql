@@ -63,7 +63,9 @@ INSERT INTO Loja(cnpj,nome,endereco,cidade) VALUES ('30000000000000','LOJA DE RO
 INSERT INTO Estoque(id, locall,cnpj, id_item,descricao,data_abst) VALUES (1, 'B01A23','30000000000000','','Blusas Femininas P', '2019/26/02');
 #----------------------------------------------CONSULTAS-------------------------------------------------------
 #consultar nome do gerente e celular dele no qual tenha na cidade de caico:
-select Gerente.nome,InfoUsuario.celular from InfoUsuario,Gerente where InfoUsuario.cidade='caico' and Gerente.cpf=InfoUsuario.cpf;
+
+select Gerente.nome,InfoUsuario.celular from InfoUsuario join Gerente 
+on Gerente.cpf=InfoUsuario.cpf where InfoUsuario.cidade='caico';
 
 #mostrar tabelas e consultas
 #mostra todos os atributos que empregados tem cadastrados
