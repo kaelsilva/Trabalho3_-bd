@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS loja_db;
 CREATE DATABASE loja_db;
 use loja_db;
 CREATE TABLE InfoUsuario (
-  cpf varchar(13) NOT NULL,
+  cpf varchar(15) NOT NULL,
   cidade varchar(45) NOT NULL,
   bairro varchar(45) NOT NULL,
   rua varchar(45) NOT NULL,
@@ -11,27 +11,27 @@ CREATE TABLE InfoUsuario (
 );
 CREATE TABLE Cliente (
   id_cliente int NOT NULL AUTO_INCREMENT,
-  cpf varchar(13) NOT NULL,
+  cpf varchar(15) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_cliente),
-	FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
+  FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
 );
 CREATE TABLE Gerente (
   id_Gerente int NOT NULL AUTO_INCREMENT,
-  cpf varchar(13) NOT NULL,
+  cpf varchar(15) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_Gerente),
-	FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
+  FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
 );
 CREATE TABLE Fornecedor (
-	cnpj varchar(45) NOT NULL,
-    cpf varchar(13) NOT NULL,
+	cnpj varchar(19) NOT NULL,
+    cpf varchar(15) NOT NULL,
     nome varchar(45) NOT NULL,
     PRIMARY KEY (cnpj)
 );
 CREATE TABLE Funcionario(
   id_Funcionario int NOT NULL AUTO_INCREMENT,
-  cpf varchar(13) NOT NULL,
+  cpf varchar(15) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_Funcionario),
 	FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
@@ -42,7 +42,7 @@ CREATE TABLE Produto(
   genero char NOT NULL,
   tamanho varchar(4) NOT NULL,
   preco float NOT NULL,
-  cnpj_fornecedor varchar(45) NOT NULL,
+  cnpj_fornecedor varchar(19) NOT NULL,
   PRIMARY KEY (id_item),
   FOREIGN KEY (cnpj_fornecedor) REFERENCES Fornecedor(cnpj)
   
@@ -58,14 +58,14 @@ CREATE TABLE Pedido(
   FOREIGN KEY (id_item) REFERENCES Produto(id_item)
 );
 CREATE TABLE Loja(
-	cnpj varchar(20) NOT NULL,
+	cnpj varchar(19) NOT NULL,
     nome varchar(20) NOT NULL,
 	PRIMARY KEY (cnpj)
 );
 CREATE TABLE Estoque(
   id int NOT NULL AUTO_INCREMENT,
   locall varchar(45) NOT NULL,
-  cnpj varchar(20) NOT NULL,
+  cnpj varchar(19) NOT NULL,
   id_item int NOT NULL,
   descricao varchar(10) NOT NULL,
   data_abst DATE  NOT NULL,
