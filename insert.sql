@@ -51,11 +51,11 @@ INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (3, 'Larissa Medeiros'
 INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (4, 'Lucas Medeiros', '25435549043');
 INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (5, 'Pedro Medeiros', '88281851040');
 
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (1, 'M', 'F','gg', 21,'30090201000198');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (2, 'M', 'M','eg',22,'43522144000110');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (3, 'M', 'F','g', 23,'09969062000180');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'M', 'F','p',24,'51907577000112');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'F', 'M','m',25,'76606876000148');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (1, 'Blusa X', 'F','gg', 21,'30090201000198');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (2, 'Calça Y', 'M','eg',22,'43522144000110');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (3, 'Camisa Z', 'F','g', 23,'09969062000180');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'Short A', 'F','p',24,'51907577000112');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'Calção B', 'M','m',25,'76606876000148');
 
 ##Aqui da erro ja
 INSERT INTO Loja(cnpj, nome) VALUES ('97743249000129', 'Waypoint Moda System Center');
@@ -84,6 +84,7 @@ INSERT INTO Notafiscal(id, id_item, quantidade, id_Funcionario) VALUES (2, 2, 20
 INSERT INTO Notafiscal(id, id_item, quantidade, id_Funcionario) VALUES (3, 3, 30, 3);
 INSERT INTO Notafiscal(id, id_item, quantidade, id_Funcionario) VALUES (4, 4, 40, 4);
 INSERT INTO Notafiscal(id, id_item, quantidade, id_Funcionario) VALUES (5, 5, 50, 5);
+
 
 INSERT INTO Pedido(id_pedido, id_cliente, id_item, quantidade, data_pedido, preco) VALUES (1, 1, 1, 10, '2019-11-28', 100);
 INSERT INTO Pedido(id_pedido, id_cliente, id_item, quantidade, data_pedido, preco) VALUES (2, 2, 2, 20, '2019-11-28', 200);

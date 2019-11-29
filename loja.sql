@@ -23,7 +23,7 @@ CREATE TABLE Gerente (
   PRIMARY KEY (id_Gerente),
   FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
 );
-CREATE TABLE Fornecedor (
+CREATE TABLE Fornecedor (	
 	cnpj varchar(19) NOT NULL,
     cpf varchar(12) NOT NULL,
     nome varchar(45) NOT NULL,
