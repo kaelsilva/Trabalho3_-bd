@@ -55,17 +55,20 @@ CREATE TABLE Pedido(
   data_pedido DATE  NOT NULL,
   preco float NOT NULL,
   PRIMARY KEY (id_pedido),
-  FOREIGN KEY (id_item) REFERENCES Produto(id_item)
+  FOREIGN KEY (id_item) REFERENCES Produto(id_item),
+  FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
 );
 CREATE TABLE Loja(
 	cnpj varchar(19) NOT NULL,
-    nome varchar(20) NOT NULL,
+    nome varchar(45) NOT NULL,
+    endereco varchar(45),
+    cidade varchar(45),
 	PRIMARY KEY (cnpj)
 );
 CREATE TABLE Estoque(
   id int NOT NULL AUTO_INCREMENT,
   locall varchar(45) NOT NULL,
-  cnpj varchar(19) NOT NULL,
+  cnpj varchar(19) NOT NULL,#cnpj da loja que o estoque ta
   id_item int NOT NULL,
   descricao varchar(10) NOT NULL,
   data_abst DATE  NOT NULL,
@@ -82,16 +85,17 @@ CREATE TABLE Sugestao(
 );
 CREATE TABLE Notafiscal(
   id int NOT NULL AUTO_INCREMENT,
-  id_item int NOT NULL,
+  id_pedido int NOT NULL,
   quantidade int NOT NULL,
   id_Funcionario int NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (id_item) REFERENCES Produto(id_item),
+  FOREIGN KEY (id_pedido) REFERENCES Pedido(id_pedido),
   FOREIGN KEY (id_Funcionario) REFERENCES Funcionario(id_Funcionario)
 );
 CREATE TABLE ListaDeVendas(
 	c_idgerada int NOT NULL AUTO_INCREMENT,
     id_pedido int NOT NULL,#id_dos pedidos vendidos
+    data_pagamento date,
     hora TIME NOT NULL,
     statuss VARCHAR (50) NOT NULL,
 	PRIMARY KEY (c_idgerada),

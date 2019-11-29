@@ -57,10 +57,14 @@ INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUE
 INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'M', 'F','p',24,'51907577000112');
 INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'F', 'M','m',25,'76606876000148');
 
-##Aqui da erro ja
-INSERT INTO Estoque(chaveComposta, local, descricao, data_abastecimento) VALUES (231, 'B01A23', 'Blusas Femininas P', '26/02/2019');
+INSERT INTO Loja(cnpj,nome,endereco,cidade) VALUES ('30000000000000','LOJA DE ROUPAS MAGALI','RUA MANIANO AHAHdashda','caico');
 
+##Aqui da erro ja
+INSERT INTO Estoque(id, locall,cnpj, id_item,descricao,data_abst) VALUES (1, 'B01A23','30000000000000','','Blusas Femininas P', '2019/26/02');
 #----------------------------------------------CONSULTAS-------------------------------------------------------
+#consultar nome do gerente e celular dele no qual tenha na cidade de caico:
+select Gerente.nome,InfoUsuario.celular from InfoUsuario,Gerente where InfoUsuario.cidade='caico' and Gerente.cpf=InfoUsuario.cpf;
+
 #mostrar tabelas e consultas
 #mostra todos os atributos que empregados tem cadastrados
 select * from InfoUsuario;
