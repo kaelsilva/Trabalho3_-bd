@@ -51,35 +51,7 @@ INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (3, 'Larissa Medeiros'
 INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (4, 'Lucas Medeiros', '25435549043');
 INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (5, 'Pedro Medeiros', '88281851040');
 
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (1, 'M', 'F','gg', 21,'30090201000198');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (2, 'M', 'M','eg',22,'43522144000110');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (3, 'M', 'F','g', 23,'09969062000180');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'M', 'F','p',24,'51907577000112');
-INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'F', 'M','m',25,'76606876000148');
 
-INSERT INTO Loja(cnpj,nome) VALUES ('30000000000000','LOJA DE ROUPAS MAGALI');
-
-##Aqui da erro ja
-INSERT INTO Estoque(id, locall,cnpj, id_item,descricao,data_abst) VALUES (1, 'B01A23','30000000000000','31','Blusas Femininas P', '2019/26/02');
-#----------------------------------------------CONSULTAS-------------------------------------------------------
-#consultar nome do gerente e celular dele no qual tenha na cidade de caico:
-
-select Gerente.nome,InfoUsuario.celular from InfoUsuario join Gerente 
-on Gerente.cpf=InfoUsuario.cpf where InfoUsuario.cidade='caico';
-
-#mostrar tabelas e consultas
-#mostra todos os atributos que empregados tem cadastrados
-select * from InfoUsuario;
-select * from Cliente;
-select * from Gerente;
-select * from Loja;
-#-----------------pra tras ja preencheu
-select * from Fornecedor;
-select * from Funcionario;
-select * from Produto;
-select * from Pedido;
-select * from Estoque;
-select * from Sugestao;
-select * from Notafiscal;
-select * From ListaDeVendas;
+#select Gerente.nome,InfoUsuario.celular from InfoUsuario join Gerente 
+#on Gerente.cpf=InfoUsuario.cpf where InfoUsuario.cidade='caico';
 
