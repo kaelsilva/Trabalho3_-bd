@@ -57,10 +57,10 @@ INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUE
 INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'M', 'F','p',24,'51907577000112');
 INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'F', 'M','m',25,'76606876000148');
 
-INSERT INTO Loja(cnpj,nome,endereco,cidade) VALUES ('30000000000000','LOJA DE ROUPAS MAGALI','RUA MANIANO AHAHdashda','caico');
+INSERT INTO Loja(cnpj,nome) VALUES ('30000000000000','LOJA DE ROUPAS MAGALI');
 
 ##Aqui da erro ja
-INSERT INTO Estoque(id, locall,cnpj, id_item,descricao,data_abst) VALUES (1, 'B01A23','30000000000000','','Blusas Femininas P', '2019/26/02');
+INSERT INTO Estoque(id, locall,cnpj, id_item,descricao,data_abst) VALUES (1, 'B01A23','30000000000000','31','Blusas Femininas P', '2019/26/02');
 #----------------------------------------------CONSULTAS-------------------------------------------------------
 #consultar nome do gerente e celular dele no qual tenha na cidade de caico:
 
