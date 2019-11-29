@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS loja_db;
 CREATE DATABASE loja_db;
 use loja_db;
 CREATE TABLE InfoUsuario (
-  cpf varchar(15) NOT NULL,
+  cpf varchar(12) NOT NULL,
   cidade varchar(45) NOT NULL,
   bairro varchar(45) NOT NULL,
   rua varchar(45) NOT NULL,
@@ -11,27 +11,27 @@ CREATE TABLE InfoUsuario (
 );
 CREATE TABLE Cliente (
   id_cliente int NOT NULL AUTO_INCREMENT,
-  cpf varchar(15) NOT NULL,
+  cpf varchar(12) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_cliente),
   FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
 );
 CREATE TABLE Gerente (
   id_Gerente int NOT NULL AUTO_INCREMENT,
-  cpf varchar(15) NOT NULL,
+  cpf varchar(12) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_Gerente),
   FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)
 );
 CREATE TABLE Fornecedor (
 	cnpj varchar(19) NOT NULL,
-    cpf varchar(15) NOT NULL,
+    cpf varchar(12) NOT NULL,
     nome varchar(45) NOT NULL,
     PRIMARY KEY (cnpj)
 );
 CREATE TABLE Funcionario(
   id_Funcionario int NOT NULL AUTO_INCREMENT,
-  cpf varchar(15) NOT NULL,
+  cpf varchar(12) NOT NULL,
   nome varchar(45) NOT NULL,
   PRIMARY KEY (id_Funcionario),
 	FOREIGN KEY (cpf) REFERENCES InfoUsuario(cpf)

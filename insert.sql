@@ -1,36 +1,69 @@
-INSERT INTO Loja(cnpj,nome)VALUES('90.027.717/0001-10','julhomodas');
-INSERT INTO Loja(cnpj,nome)VALUES('90.027.717/0001-11','amodas');
-INSERT INTO Loja(cnpj,nome)VALUES('90.027.717/0001-12','duewromodas');
-INSERT INTO Loja(cnpj,nome)VALUES('90.027.717/0001-13','juodas');
-INSERT INTO Loja(cnpj,nome)VALUES('90.027.717/0001-14','gdsas');
-#------------------------------------------------------------------------------------------
-INSERT INTO Fornecedor(cnpj , cpf ,nome)VALUES('90.027.717/0001-01',"213123",'matheus');
-INSERT INTO Fornecedor(cnpj , cpf ,nome)VALUES('90.027.717/0001-02',"213123",'atheus');
-INSERT INTO Fornecedor(cnpj , cpf ,nome)VALUES('90.027.717/0001-03',"2123",'theus');
-INSERT INTO Fornecedor(cnpj , cpf ,nome)VALUES('90.027.717/0001-04',"13123",'eus');
-INSERT INTO Fornecedor(cnpj , cpf ,nome)VALUES('90.027.717/0001-05',"2123",'us');
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('70866037080','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('59329309003','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('37554935003','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('98510021007','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('82302328060','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+#----------------------------------------------usuario GERENTE abaixo------------------------------------------------------
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('17207482094','caico','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('86560547086','caico','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('28392143000','caico','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('94200409097','caico','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('08316838052','caico','fsdfsdfsfatheus',"rewrw",99832710);
+#----------------------------------------------usuario FUNCIONARIO abaixo------------------------------------------------------
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('59635121075','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('69087579004','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('60205634052','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('25435549043','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('88281851040','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+#----------------------------------------------usuario FORNECEDOR abaixo------------------------------------------------------
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('1111111111','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('1111111112','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('1111111113','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('1111111114','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
+INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('1111111115','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
 
-#1#prainserir numa table que tem chave estrangeira de outra lembrar da dependencia de existencia
 
-INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('116.008.084-41','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
-INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('116.008.084-42','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
-INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('116.008.084-43','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
-INSERT INTO InfoUsuario (cpf,cidade,bairro,rua,celular)VALUES('116.008.084-44','saojoao','fsdfsdfsfatheus',"rewrw",99832710);
-#2#
+#@@@@@@@@@@@@@@@@ atributos PK com auto incremente nem precisa colocar
 
-INSERT INTO Cliente(id_cliente,cpf,nome)VALUES(1,'116.008.084-41','joaoA');
-INSERT INTO Cliente(id_cliente,cpf,nome)VALUES(2,'116.008.084-42','joaoB');
-INSERT INTO Cliente(id_cliente,cpf,nome)VALUES(3,'116.008.084-43','joaoC');
-INSERT INTO Cliente(id_cliente,cpf,nome)VALUES(4,'116.008.084-44','joaoD');
+#CLIENTE É UM usuario e nem todo usuario é cliente
+INSERT INTO Cliente(id_cliente, nome, cpf) VALUES (1, 'Fulano Pereira', '70866037080');
+INSERT INTO Cliente(id_cliente, nome, cpf) VALUES (2, 'Sicrano Pereira', '59329309003');
+INSERT INTO Cliente(id_cliente, nome, cpf) VALUES (3, 'Beltrano Pereira', '37554935003');
+INSERT INTO Cliente(id_cliente, nome, cpf) VALUES (4, 'João Pereira', '98510021007');
+INSERT INTO Cliente(id_cliente, nome, cpf) VALUES (5, 'Maria Pereira', '82302328060');
 
-INSERT INTO  Gerente(id_Gerente,cpf,nome)VALUES(1,'116.008.084-41','joaoA');#gerente tambem é um usuario e cpf tem que estar la
-INSERT INTO  Gerente(id_Gerente,cpf,nome)VALUES(2,'116.008.084-42','joaoB');#pra ter endereço dele e tal
-INSERT INTO  Gerente(id_Gerente,cpf,nome)VALUES(3,'116.008.084-43','joaoc');
-INSERT INTO  Gerente(id_Gerente,cpf,nome)VALUES(4,'116.008.084-44','joaoD');
+#gerente É UM usuario e nem todo usuario é gerente
+INSERT INTO Gerente(id_gerente, nome, cpf) VALUES (1, 'Ronaldo Nazário', '17207482094');
+INSERT INTO Gerente(id_gerente, nome, cpf) VALUES (2, 'Roberto Nazário', '86560547086');
+INSERT INTO Gerente(id_gerente, nome, cpf) VALUES (3, 'Rômulo Nazário', '28392143000');
+INSERT INTO Gerente(id_gerente, nome, cpf) VALUES (4, 'Rodrigo Nazário', '94200409097');
+INSERT INTO Gerente(id_gerente, nome, cpf) VALUES (5, 'Roberval Nazário', '08316838052');
+
+INSERT INTO Fornecedor(cnpj,cpf,nome) VALUES ('30090201000198', '11111111111','Papelaria X');
+INSERT INTO Fornecedor(cnpj,cpf,nome) VALUES ('43522144000110', '11111111112', 'Moda Tecidos');
+INSERT INTO Fornecedor(cnpj,cpf,nome) VALUES ('09969062000180', '11111111113', 'Fulano Roupas');
+INSERT INTO Fornecedor(cnpj,cpf,nome) VALUES ('51907577000112', '11111111114', 'Y Calçados');
+INSERT INTO Fornecedor(cnpj,cpf,nome) VALUES ('76606876000148', '11111111115', 'ABC Bonés');
+
+INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (1, 'Luiz Medeiros', '59635121075');
+INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (2, 'Maria Medeiros', '69087579004');
+INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (3, 'Larissa Medeiros', '60205634052');
+INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (4, 'Lucas Medeiros', '25435549043');
+INSERT INTO Funcionario(id_funcionario, nome, cpf) VALUES (5, 'Pedro Medeiros', '88281851040');
+
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (1, 'M', 'F','gg', 21,'30090201000198');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (2, 'M', 'M','eg',22,'43522144000110');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (3, 'M', 'F','g', 23,'09969062000180');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (4, 'M', 'F','p',24,'51907577000112');
+INSERT INTO Produto(id_item, nome, genero, tamanho, preco,cnpj_fornecedor) VALUES (5, 'F', 'M','m',25,'76606876000148');
+
+##Aqui da erro ja
+INSERT INTO Estoque(chaveComposta, local, descricao, data_abastecimento) VALUES (231, 'B01A23', 'Blusas Femininas P', '26/02/2019');
+
 #----------------------------------------------CONSULTAS-------------------------------------------------------
 #mostrar tabelas e consultas
 #mostra todos os atributos que empregados tem cadastrados
-select * from infoUsuario;
+select * from InfoUsuario;
 select * from Cliente;
 select * from Gerente;
 select * from Loja;
@@ -43,3 +76,4 @@ select * from Estoque;
 select * from Sugestao;
 select * from Notafiscal;
 select * From ListaDeVendas;
+
